@@ -4,14 +4,15 @@ import Button from "./button/index.jsx";
 import IconSelector from "./Icon-selector/index.jsx";
 import "./index.scss";
 import { useState } from 'react'
+import { addNewProject } from "../../utils/project-tools.js";
 
 function Input() {
   const [name, setName] = useState(null);
   const [description, setDescription] = useState(null);
   const [icon, setIcon] = useState(null);
 
-  const submitProject = () =>{
-  
+  const handleNew = () =>{
+    addNewProject({name,description,icon});
   }
 
   return (
@@ -44,7 +45,7 @@ function Input() {
       <Button 
       customText={"Listo!"} 
       customClass={"submit"}
-      customFunction={submitProject}
+      customFunction={handleNew}
       />
     </form>
   );
