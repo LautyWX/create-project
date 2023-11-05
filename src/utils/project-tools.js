@@ -13,21 +13,21 @@ export const deleteProject = async (projectID) => {
 //edits
 
 export const updateName = async (projectID,newName) => {
-    const docRef = doc(db,"project",id);
+    const docRef = doc(db,"project",projectID);
     await updateDoc(docRef,{
         "name":newName
     })
 }
 
 export const updateDescription = async (projectID,newDescription) => {
-    const docRef = doc(db,"project",id);
+    const docRef = doc(db,"project",projectID);
     await updateDoc(docRef,{
         "name":newDescription
     })
 }
 
 export const updateIcon = async (projectID,newIcon) => {
-    const docRef = doc(db,"project",id);
+    const docRef = doc(db,"project",projectID);
     await updateDoc(docRef,{
         "name":newIcon
     })
